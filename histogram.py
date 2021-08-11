@@ -8,7 +8,7 @@ soup = BeautifulSoup(requests.get(furl % 1).content, "html.parser")
 pages = soup.find_all("a", class_="paging-arrow")[-1]["href"]
 pages = int(pages[6:pages.find("&")])
 
-print("Number of pages: %d" % pages)
+print("Number of pages:", pages)
 print("Crawling...")
 
 freq = {}
